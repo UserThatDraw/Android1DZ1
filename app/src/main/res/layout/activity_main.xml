@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back"/>
+
+    <ImageView
+        android:id="@+id/mainImage_png"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50sp"
+        android:src="@drawable/mainic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+    <ImageView
+        android:id="@+id/userIcon_png"
+        app:layout_constraintEnd_toStartOf="@id/email_et"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/useric"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+
+    <ImageView
+        android:id="@+id/lockIcon_png"
+        app:layout_constraintEnd_toStartOf="@id/password_et"
+        app:layout_constraintTop_toBottomOf="@id/userIcon_png"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="13sp"
+        android:src="@drawable/lock"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+
+    <ImageView
+        app:layout_constraintTop_toBottomOf="@id/password_et"
+        app:layout_constraintRight_toLeftOf="@id/forget_btn"
+        android:layout_marginTop="13sp"
+        android:src="@drawable/unlock"
+        android:layout_width="20dp"
+        android:layout_height="20dp"/>
+
+    <CheckBox
+        app:layout_constraintRight_toLeftOf="@id/checkBoxText_txt"
+        app:layout_constraintTop_toBottomOf="@id/password_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/checkBoxText_txt"
+        android:text="Remember me"
+        app:layout_constraintTop_toBottomOf="@id/password_et"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="13sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="115dp" />
+
+    <Button
+        android:id="@+id/forget_btn"
+        android:textColor="@color/black"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:text="Forget password"
+        android:textSize="11dp"
+        app:layout_constraintLeft_toRightOf="@id/checkBoxText_txt"
+        app:layout_constraintTop_toBottomOf="@id/password_et"
+        android:layout_marginLeft="35sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/log_btn"
+        android:text="Log in"
+        app:layout_constraintTop_toBottomOf="@id/password_et"
+        android:backgroundTint="@color/purple_200"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="35sp"
+        android:layout_marginHorizontal="60sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/sign_btn"
+        android:text="Sign up"
+        app:layout_constraintTop_toBottomOf="@id/log_btn"
+        android:backgroundTint="@color/teal_200"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:layout_marginHorizontal="60sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/email_et"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:backgroundTint="@color/black"
+        android:hint="Emile"
+        android:layout_marginHorizontal="60sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/password_et"
+        android:backgroundTint="@color/black"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Password"
+        android:layout_marginHorizontal="60sp"
+        app:layout_constraintTop_toBottomOf="@id/email_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
